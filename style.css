@@ -61,7 +61,6 @@ body {
 }
 
 .wrapper.show-category .screen-backdrop {
-    z-index: 1; 
     transform: translate(-50%, -60%);
     border: 10px solid rgb(196, 226, 236);
     background-color: rgb(150, 201, 199);
@@ -374,5 +373,14 @@ body {
     background-color: #34a797;
     color: #fff;
     transform: scale(1.1);
+    
+}
+
+.add-task{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px;
 
 }
