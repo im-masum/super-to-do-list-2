@@ -50,19 +50,22 @@ body {
 
 .wrapper.show-category .home-screen {
     transform: translateY(-100%);
-
+    
 }
 
 .wrapper.show-category .category-screen {
     transform: translateY(-200%);
     margin: 40px 50px;
     cursor: pointer;
+
 }
 
 .wrapper.show-category .screen-backdrop {
+    z-index: 1; 
     transform: translate(-50%, -60%);
     border: 10px solid rgb(196, 226, 236);
     background-color: rgb(150, 201, 199);
+
 }
 
 .screen-backdrop {
@@ -272,7 +275,12 @@ body {
     height: calc(100%) -12rem;
     padding-bottom: 20px;
     overflow: auto;
-    border: 1px solid;
+    border-radius: 10px;
+}
+
+.task-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px 5px #00000040;
 }
 
 .task {
@@ -329,21 +337,42 @@ body {
 .task-wrapper .delete i {
     font-size: 1.5rem;
 }
-    .task-wrapper .delete {
-        padding: 10px;
-        border-radius: 10px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-    }
+
+.task-wrapper .delete {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
 
 
-    .task-wrapper:hover .delete {
-        visibility: visible;
-        opacity: 1;
-    }
+.task-wrapper:hover .delete {
+    visibility: visible;
+    opacity: 1;
+}
 
-    .task-wrapper .delete:hover {
-        color: red;
-    }
+.task-wrapper .delete:hover {
+    color: red;
+}
+
+.add-task-btn {
+    padding: .2rem .5rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: aquamarine;
+    font-size: 50px;
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    transition: all 0.3s;
+}
+
+.add-task-btn:hover {
+    background-color: #34a797;
+    color: #fff;
+    transform: scale(1.1);
+
+}
