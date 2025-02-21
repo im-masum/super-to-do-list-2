@@ -17,6 +17,8 @@ const blackBackdrop = document.querySelector(".black-backdrop");
 const toggleAddTaskForm =() => {
   addTaskForm.classList.toggle("active");
   blackBackdrop.classList.toggle("active");
+  addTaskBnt.classList.toggle("active");
+
 };
  
 addTaskBnt.addEventListener("click", toggleAddTaskForm);

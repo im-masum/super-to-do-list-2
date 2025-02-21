@@ -87,13 +87,21 @@ body {
 }
 
 .menu-btn {
-    padding: 10px;
+    display: flex;
+    width: 15%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 60px;
     color: rgb(36, 34, 34);
-
+    transition: all 0.3s;   
 }
-
+.menu-btn:hover{
+    background-color:#34a797;
+    color:#fff;
+}
 .category-screen .head-wrapper {
     display: flex;
     width: 90%;
@@ -369,104 +377,110 @@ body {
     transition: all 0.3s;
 }
 
-.add-task-btn:hover {
-    background-color: #34a797;
-    color: #fff;
-    transform: scale(1.1);
-
+.add-task-btn.active {
+    z-index: 1;
+    bottom: 20rem;
+    transform: rotate(45deg);
 }
 
-.add-task {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 20px 30px;
-    transition: all 0.3s;
-}
+    .add-task-btn:hover {
+        background-color: #34a797;
+        color: #fff;
+        transform: scale(1.1);
 
-.add-task.active {
-    bottom: 0;
-}
+    }
 
-.add-task .heading {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+    .add-task {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 30px;
+        transition: all 0.3s;
+    }
 
-.input-group {
-    position: relative;
-    margin-bottom: 1rem;
-}
+    .add-task.active {
+        bottom: 0;
+    }
 
-.input-group input,
-.input-group label {
-    width: 100%;
-    display: block;
-}
+    .add-task .heading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 
-.input-group input,
-.input-group select {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 12px;
-}
+    .input-group {
+        position: relative;
+        margin-bottom: 1rem;
+    }
 
-.input-group label {
-    width: max-content;
-    padding: 10px 0px;
-    margin-bottom: 5px;
-}
+    .input-group input,
+    .input-group label {
+        width: 100%;
+        display: block;
+    }
 
-.btns {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
+    .input-group input,
+    .input-group select {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 12px;
+    }
 
-.btns button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s;
-}
+    .input-group label {
+        width: max-content;
+        padding: 10px 0px;
+        margin-bottom: 5px;
+    }
 
-.btns button.add-btn {
-    background-color: aquamarine;
-    color: #000;
-}
+    .btns {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
 
-.add-task-backdrop {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 135%;
-    height: 20rem;
-    border-radius: 50% 50% 0 0;
-    transform: translate(-50%);
-    background-color: #fff;
-    border: 1px solid;
-}
+    .btns button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
 
-.black-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-    background-color: #00000023;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-}
+    .btns button.add-btn {
+        background-color: aquamarine;
+        color: #000;
+    }
 
-.black-backdrop.active{
-    opacity: 1;
-    visibility: visible;
-}
+    .add-task-backdrop {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 135%;
+        height: 20rem;
+        border-radius: 50% 50% 0 0;
+        transform: translate(-50%);
+        background-color: #fff;
+        border: 1px solid;
+    }
+
+    .black-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        background-color: #00000023;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .black-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+    }
