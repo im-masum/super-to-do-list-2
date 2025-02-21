@@ -2,7 +2,6 @@ const wrapper = document.querySelector(".wrapper");
 const menuBtn = document.querySelector(".menu-btn");
 const backBtn = document.querySelector(".back-btn");
 
-
 const toggleScreen = () => {
   wrapper.classList.toggle("show-category");
 };
@@ -14,16 +13,14 @@ const addTaskBnt = document.querySelector(".add-task-btn");
 const addTaskForm = document.querySelector(".add-task");
 const blackBackdrop = document.querySelector(".black-backdrop");
 
-const toggleAddTaskForm =() => {
+const toggleAddTaskForm = () => {
   addTaskForm.classList.toggle("active");
   blackBackdrop.classList.toggle("active");
   addTaskBnt.classList.toggle("active");
-
 };
- 
+
 addTaskBnt.addEventListener("click", toggleAddTaskForm);
 blackBackdrop.addEventListener("click", toggleAddTaskForm);
-
 
 // lets add categories and tasks with js
 
@@ -56,9 +53,8 @@ let categories = [
     title: "Finance",
     img: "finance.jpg",
   },
-  
 ];
- 
+
 let tasks = [
   {
     id: 1,
@@ -152,4 +148,11 @@ let tasks = [
   },
 ];
 
+const categoriesContainer = document.querySelector(".categories");
 
+const renderCategories = () => {
+  categoriesContainer.innerHTML = "";
+  
+};
+
+renderCategories();
