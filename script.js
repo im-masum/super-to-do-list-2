@@ -27,7 +27,7 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 let categories = [
   {
     title: "Personal",
-    img: "user.jpg",
+    img: "user-1.jpg",
   },
   {
     title: "Work",
@@ -151,8 +151,36 @@ let tasks = [
 const categoriesContainer = document.querySelector(".categories");
 
 const renderCategories = () => {
-  categoriesContainer.innerHTML = "";
-  
+  categoriesContainer.innerHtml = "";
+  categories.forEach((category) => {
+
+    // get all the tasks of current category
+    const categoryTasks = tasks.filter(
+      (task) => task.category.toLowerCase () === category.title.toLowerCase()
+    );
+
+    // create a div to render category
+    const div = document.createElement("div");
+     div.classList.add("category");
+    div.innerHTML = `
+                        <div class="left">
+                        <img src="images/${category.img}"
+                          alt="${category.title}" />
+                          <div class="content">
+                            <h2>"${category.title}"</h2>
+                            <p>"${categoryTasks.length}" Tasks</p>
+                          </div></> 
+                                </div>
+                                <div class="options">
+                                  <div class="toggle-btn">
+                                    <i class='bx bx-dots-vertical-rounded'></i>
+                                  </div>
+                                </div>
+                                `;
+                      
+    categoriesContainer.appendChild(div);
+  });
+
 };
 
 renderCategories();
