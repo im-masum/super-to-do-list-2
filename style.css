@@ -207,7 +207,7 @@ body {
         border-radius: .5rem;
         padding: 1.5rem 1rem;
         justify-content: space-between;
-        box-shadow: 0 10px 20px 5px #00000023;
+        /* box-shadow: 0 10px 20px 5px #00000023; */
         transition: all .5s;
     }
 
