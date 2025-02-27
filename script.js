@@ -24,129 +24,129 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 
 // lets add categories and tasks with js
 
-let categories = [
-  {
-    title: "Personal",
-    img: "user-1.jpg",
-  },
-  {
-    title: "Work",
-    img: "briefcase.jpg",
-  },
-  {
-    title: "Shopping",
-    img: "shopping-bag.jpg",
-  },
-  {
-    title: "Health",
-    img: "health.jpg",
-  },
-  {
-    title: "Fitness",
-    img: "fitness.jpg",
-  },
-  {
-    title: "Education",
-    img: "education.jpg",
-  },
-  {
-    title: "Finance",
-    img: "finance.jpg",
-  },
-];
+// let categories = [
+//   {
+//     title: "Personal",
+//     img: "user-1.jpg",
+//   },
+//   {
+//     title: "Work",
+//     img: "briefcase.jpg",
+//   },
+//   {
+//     title: "Shopping",
+//     img: "shopping-bag.jpg",
+//   },
+//   {
+//     title: "Health",
+//     img: "health.jpg",
+//   },
+//   {
+//     title: "Fitness",
+//     img: "fitness.jpg",
+//   },
+//   {
+//     title: "Education",
+//     img: "education.jpg",
+//   },
+//   {
+//     title: "Finance",
+//     img: "finance.jpg",
+//   },
+// ];
 
-let tasks = [
-  {
-    id: 1,
-    task: "Go to market",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 2,
-    task: "Read chapter of a book",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 3,
-    task: "Prepare presentation for meeting",
-    category: "Work",
-    completed: false,
-  },
-  {
-    id: 4,
-    task: "Complete coding challenge",
-    category: "Coding",
-    completed: false,
-  },
-  {
-    id: 5,
-    task: "Do a 20-minute workout",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 6,
-    task: " Take a 30-minute walk",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 7,
-    task: "Watch an educational video online",
-    category: "Educational",
-    completed: false,
-  },
-  {
-    id: 8,
-    task: "Review monthly budget",
-    category: "Finance",
-    completed: false,
-  },
-  {
-    id: 9,
-    task: "Buy groceries for the week",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 10,
-    task: "Write in a journal",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 11,
-    task: "Try a new healthy recipe",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 12,
-    task: "Attend a yoga class",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 13,
-    task: "Buy new clothes ",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 14,
-    task: "Set up automatic bill payments",
-    category: "Finance",
-    completed: false,
-  },
-  {
-    id: 15,
-    task: "Read an article about a new topic",
-    category: "Personal",
-    completed: false,
-  },
-];
+// let tasks = [
+//   {
+//     id: 1,
+//     task: "Go to market",
+//     category: "Shopping",
+//     completed: false,
+//   },
+//   {
+//     id: 2,
+//     task: "Read chapter of a book",
+//     category: "Personal",
+//     completed: false,
+//   },
+//   {
+//     id: 3,
+//     task: "Prepare presentation for meeting",
+//     category: "Work",
+//     completed: false,
+//   },
+//   {
+//     id: 4,
+//     task: "Complete coding challenge",
+//     category: "Coding",
+//     completed: false,
+//   },
+//   {
+//     id: 5,
+//     task: "Do a 20-minute workout",
+//     category: "Fitness",
+//     completed: false,
+//   },
+//   {
+//     id: 6,
+//     task: " Take a 30-minute walk",
+//     category: "Health",
+//     completed: false,
+//   },
+//   {
+//     id: 7,
+//     task: "Watch an educational video online",
+//     category: "Educational",
+//     completed: false,
+//   },
+//   {
+//     id: 8,
+//     task: "Review monthly budget",
+//     category: "Finance",
+//     completed: false,
+//   },
+//   {
+//     id: 9,
+//     task: "Buy groceries for the week",
+//     category: "Shopping",
+//     completed: false,
+//   },
+//   {
+//     id: 10,
+//     task: "Write in a journal",
+//     category: "Personal",
+//     completed: false,
+//   },
+//   {
+//     id: 11,
+//     task: "Try a new healthy recipe",
+//     category: "Health",
+//     completed: false,
+//   },
+//   {
+//     id: 12,
+//     task: "Attend a yoga class",
+//     category: "Fitness",
+//     completed: false,
+//   },
+//   {
+//     id: 13,
+//     task: "Buy new clothes ",
+//     category: "Shopping",
+//     completed: false,
+//   },
+//   {
+//     id: 14,
+//     task: "Set up automatic bill payments",
+//     category: "Finance",
+//     completed: false,
+//   },
+//   {
+//     id: 15,
+//     task: "Read an article about a new topic",
+//     category: "Personal",
+//     completed: false,
+//   },
+// ];
 
 const categoriesContainer = document.querySelector(".categories");
 
