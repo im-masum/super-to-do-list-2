@@ -14,10 +14,11 @@
 
 body {
     display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    min-height: 100vh;
+    color: #2e2e2e;
 
 }
 
@@ -45,17 +46,14 @@ body {
     flex: 1;
     min-width: 100%;
     transition: all .3s;
-
 }
 
 .wrapper.show-category .home-screen {
     transform: translateX(-100%);
-
 }
 
 .wrapper.show-category .category-screen {
     transform: translateX(-100%);
-
 }
 
 .wrapper.show-category .screen-backdrop {
