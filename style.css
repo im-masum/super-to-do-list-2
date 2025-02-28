@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Sans+Mono:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Noto+Sans+Mono:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     padding: 0;
@@ -44,19 +44,17 @@ body {
 .wrapper .screen {
     flex: 1;
     min-width: 100%;
-    transition: all .5s;
+    transition: all .3s;
 
 }
 
 .wrapper.show-category .home-screen {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
 
 }
 
 .wrapper.show-category .category-screen {
-    transform: translateY(-200%);
-    margin: 40px 50px;
-    cursor: pointer;
+    transform: translateX(-100%);
 
 }
 
@@ -110,9 +108,9 @@ body {
 
 .category-screen .head-wrapper {
     display: flex;
-    width: 90%;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
 
 .category-screen .head-wrapper .options {
@@ -265,7 +263,7 @@ body {
     opacity: .6;
 }
 
-/* ===TASKS==== */
+/* ===TASKS ==== */
 .tasks-wrapper {
     padding: 0 30px;
     margin-top: 1rem;
