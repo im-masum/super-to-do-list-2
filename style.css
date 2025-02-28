@@ -195,20 +195,19 @@ body {
     .categories {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 1rem 0;
-        gap: .5rem;
-        margin: 3rem 0;
-
+        padding-top: 1rem;
+        gap: 1rem;
     }
 
     .categories .category {
+        display: flex;
+        justify-content: space-between;                        
+        padding: 1.5rem 1rem;
         background-color: #fff;
         border-radius: .5rem;
-        padding: 1.5rem 1rem;
-        justify-content: space-between;
         box-shadow: 0 10px 20px 5px #00000023;
         transition: all .5s;
+        cursor: pointer;
     }
 
     .categories .category:hover {
@@ -227,27 +226,26 @@ body {
         width: 3rem;
         border-radius: 20px;
     }
-
-    .content h2 {
+    
+     .category .content h2 {
         font-weight: 500;
         font-size: 32px;
     }
 
-    .content p {
+    .category .content p {
         color: rgb(61, 59, 59);
         font-size: .8rem;
         opacity: 0.6;
     }
 
     .category .options {
-        transition: all 0.3s;
-        border-radius: .5rem;
-        padding: .2rem .1rem;
+     opacity:  o;
+     visibility: hidden;
     }
 
-    .category .options:hover {
-        background-color: #ece4e4;
-        color: black;
+    .category:hover .options {
+        opacity: 1;
+        visibility: visible;
     }
 
     .category .toggle-btn {
