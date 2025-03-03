@@ -132,7 +132,7 @@ body {
     color: rgb(252, 232, 7);
     transition: 1s;
     padding: 10px 30px;
-}
+ }
 
 .category-screen .head-wrapper .back-btn:hover {
     border-radius: 2rem;
@@ -266,7 +266,7 @@ body {
     transform: all .3s;
 }
 .category .toggle-btn:hover{
-    color: #34a797;
+    color: #04fad9;
 }
 
 /* ===TASKS ==== */
@@ -293,7 +293,7 @@ body {
     justify-content: space-between;
     padding: 15px 20px;
     margin-top: 1rem;
-    height: calc(100%) -12rem;
+    height: calc(100%) - 12rem;
     padding-bottom: 20px;
     overflow: auto;
     border-radius: 10px;
