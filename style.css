@@ -70,7 +70,7 @@ body {
     top: 0;
     left: 50%;
     z-index: -1;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     border-radius: 0 0 50% 50%;
     background-color: aquamarine;
     border: 20px solid rgb(224, 235, 23);
@@ -115,20 +115,22 @@ body {
     font-size: 40px;
     padding: 8px;
     border-radius: .4rem;
+    transition: all .3s;
 }
 
 .category-screen .head-wrapper .options:hover {
-    background-color: #34a797;
-    color: #fff;
+    background-color: white;
+    
 }
 
 .back-btn {
-    font-size: 50px;
-    color: rgb(252, 232, 7);
-    transition: .5s;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+    font-size: 50px;
+    color: rgb(252, 232, 7);
+    transition: 1s;
+    padding: 10px 30px;
 }
 
 .category-screen .head-wrapper .back-btn:hover {
