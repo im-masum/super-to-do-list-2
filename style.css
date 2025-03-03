@@ -263,6 +263,10 @@ body {
     padding: 0rem .4rem;
     font-size: 1.8rem;
     opacity: .8;
+    transform: all .3s;
+}
+.category .toggle-btn:hover{
+    color: #34a797;
 }
 
 /* ===TASKS ==== */
