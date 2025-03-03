@@ -49,11 +49,11 @@ body {
 }
 
 .wrapper.show-category .home-screen {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
 }
 
 .wrapper.show-category .category-screen {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
 }
 
 .wrapper.show-category .screen-backdrop {
@@ -70,7 +70,7 @@ body {
     top: 0;
     left: 50%;
     z-index: -1;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     border-radius: 0 0 50% 50%;
     background-color: aquamarine;
     border: 20px solid rgb(224, 235, 23);
