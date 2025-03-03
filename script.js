@@ -24,38 +24,38 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 
 // lets add categories and tasks with js
 
-// let categories = [
-//   {
-//     title: "Personal",
-//     img: "user-1.jpg",
-//   },
-//   {
-//     title: "Work",
-//     img: "briefcase.jpg",
-//   },
-//   {
-//     title: "Shopping",
-//     img: "shopping-bag.jpg",
-//   },
-//   {
-//     title: "Health",
-//     img: "health.jpg",
-//   },
-//   {
-//     title: "Fitness",
-//     img: "fitness.jpg",
-//   },
-//   {
-//     title: "Education",
-//     img: "education.jpg",
-//   },
-//   {
-//     title: "Finance",
-//     img: "finance.jpg",
-//   },
-// ];
+let categories = [
+  {
+    title: "Personal",
+    img: "user-1.jpg",
+  },
+  {
+    title: "Work",
+    img: "briefcase.jpg",
+  },
+  {
+    title: "Shopping",
+    img: "shopping-bag.jpg",
+  },
+  {
+    title: "Health",
+    img: "health.jpg",
+  },
+  {
+    title: "Fitness",
+    img: "fitness.jpg",
+  },
+  {
+    title: "Education",
+    img: "education.jpg",
+  },
+  {
+    title: "Finance",
+    img: "finance.jpg",
+  },
+];
 
-// let tasks = [
+let tasks = [
 //   {
 //     id: 1,
 //     task: "Go to market",
@@ -146,7 +146,7 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 //     category: "Personal",
 //     completed: false,
 //   },
-// ];
+ ];
 
 const categoriesContainer = document.querySelector(".categories");
 
