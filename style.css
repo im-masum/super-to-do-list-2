@@ -141,8 +141,11 @@ body {
 .category-details {
     display: flex;
     align-items: center;
-    padding: 0 30px;
-    gap: 1rem;
+    padding: 10px 30px;
+    margin: 10px;
+    gap: 2rem;
+    margin-top: 100px;
+    border-radius: 10px;
 }
 
 .category-details img {
