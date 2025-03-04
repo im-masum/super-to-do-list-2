@@ -1,6 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
-const menuBtn = document.querySelector(".menu-btn");
 const backBtn = document.querySelector(".back-btn");
+const menuBtn = document.querySelector(".menu-btn");
 
 const toggleScreen = () => {
   wrapper.classList.toggle("show-category");
@@ -25,10 +25,10 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 // lets add categories and tasks with js
 
 let categories = [
-  // {
-  //   title: "Personal",
-  //   img: "user-1.jpg",
-  // },
+  {
+    title: "Personal",
+    img: "user-1.jpg",
+  },
   {
     title: "Work",
     img: "briefcase.jpg",
