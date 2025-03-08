@@ -25,10 +25,10 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 // lets add categories and tasks with js
 
 let categories = [
-  {
-    title: "Personal",
-    img: "user-1.jpg",
-  },
+  // {
+  //   title: "Personal",
+  //   img: "user-1.jpg",
+  // },
   {
     title: "Work",
     img: "briefcase.jpg",
