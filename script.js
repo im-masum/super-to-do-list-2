@@ -148,7 +148,12 @@ let tasks = [
   },
 ];
 
+let selectCategory = categories[0];
+
 const categoriesContainer = document.querySelector(".categories");
+const categoryTitle = document.querySelector(".category-title");
+const categoryTask = document.querySelector(".category-task");
+
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
