@@ -146,22 +146,24 @@ let tasks = [
     category: "Personal",
     completed: false,
   },
- ];
+];
 
 const categoriesContainer = document.querySelector(".categories");
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
-
     // get all the tasks of current category
     const categoryTasks = tasks.filter(
-      (task) => task.category.toLowerCase () === category.title.toLowerCase()
+      (task) => task.category.toLowerCase() === category.title.toLowerCase()
     );
 
     // create a div to render category
     const div = document.createElement("div");
-     div.classList.add("category");
+    div.classList.add("category");
+    FragmentDirective.addEventListener("click", () => {
+      wrapper.classList.add("show-category");
+    });
     div.innerHTML = `
                         <div class="left">
                         <img src="images/${category.img}"
@@ -169,18 +171,17 @@ const renderCategories = () => {
                           <div class="content">
                             <h2>"${category.title}"</h2>
                             <p>"${categoryTasks.length}" Tasks</p>
-                          </div></> 
-                                </div>
+                          </div>
+                          </div>
                                 <div class="options">
                                   <div class="toggle-btn">
                                     <i class='bx bx-dots-vertical-rounded'></i>
                                   </div>
                                 </div>
                                 `;
-                      
+
     categoriesContainer.appendChild(div);
   });
-
 };
 
 renderCategories();
