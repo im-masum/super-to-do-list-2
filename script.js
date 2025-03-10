@@ -25,10 +25,10 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 // lets add categories and tasks with js
 
 let categories = [
-  // {
-  //   title: "Personal",
-  //   img: "user-1.jpg",
-  // },
+  //  {
+  //    title: "Personal",
+  //    img: "user-1.jpg",
+  //  },
   {
     title: "Work",
     img: "briefcase.jpg",
@@ -166,8 +166,10 @@ const renderCategories = () => {
     // create a div to render category
     const div = document.createElement("div");
     div.classList.add("category");
-    FragmentDirective.addEventListener("click", () => {
+    div.addEventListener("click", () => {
       wrapper.classList.add("show-category");
+      selectCategory = category;
+      categoryTitle.innerHTML = categoryTitle;
     });
     div.innerHTML = `
                         <div class="left">
