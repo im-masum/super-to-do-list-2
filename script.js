@@ -25,10 +25,10 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 // lets add categories and tasks with js
 
 let categories = [
-  //  {
-  //    title: "Personal",
-  //    img: "user-1.jpg",
-  //  },
+   {
+     title: "Personal",
+     img: "user-1.jpg",
+   },
   {
     title: "Work",
     img: "briefcase.jpg",
@@ -153,6 +153,8 @@ let selectCategory = categories[0];
 const categoriesContainer = document.querySelector(".categories");
 const categoryTitle = document.querySelector(".category-title");
 const categoryTask = document.querySelector(".category-task");
+const categoryImg = document.querySelector("#category-img");
+
 
 
 const renderCategories = () => {
@@ -170,10 +172,10 @@ const renderCategories = () => {
       wrapper.classList.add("show-category");
       selectCategory = category;
       categoryTitle.innerHTML = categoryTitle;
-      categoryImg.src = 'images/${category.img}';
+      categoryImg.src = 'image/${category.img}';
     });
     div.innerHTML = `
-                        <div class="left">
+                        <div class="left"> 
                         <img src="images/${category.img}"
                           alt="${category.title}" />
                           <div class="content">
