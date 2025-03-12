@@ -170,6 +170,7 @@ const renderCategories = () => {
       wrapper.classList.add("show-category");
       selectCategory = category;
       categoryTitle.innerHTML = categoryTitle;
+      categoryImg.src = 'images/${category.img}';
     });
     div.innerHTML = `
                         <div class="left">
