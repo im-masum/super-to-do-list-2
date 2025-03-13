@@ -1,6 +1,3 @@
-import CardHeader from "@mui/material/CardHeader";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 const wrapper = document.querySelector(".wrapper");
 const backBtn = document.querySelector(".back-btn");
 const menuBtn = document.querySelector(".menu-btn");
@@ -160,10 +157,9 @@ const categoryImg = document.querySelector("#category-img");
 
 const calculateTotal = () => {
   const categoryTasks = tasks.filter(
-    (task) => 
-     task.category.toLowerCase() === selectCategory.title.toLowerCase()
+    (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
-  categoryTasks.innerHTML = '${categoryTasks.length} tasks';
+  categoryTasks.innerHTML = "${categoryTasks.length} tasks";
 };
 
 const renderCategories = () => {
@@ -171,7 +167,8 @@ const renderCategories = () => {
   categories.forEach((category) => {
     // get all the tasks of current category
     const categoryTasks = tasks.filter(
-      (task) => task.category.toLowerCase() === category.title.toLowerCase()
+      (task) =>
+        task.category.toLowerCase() === selectCategory.title.toLowerCase()
     );
 
     // create a div to render category
