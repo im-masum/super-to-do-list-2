@@ -179,6 +179,7 @@ const renderCategories = () => {
       selectCategory = category;
       categoryTitle.innerHTML = categoryTitle;
       categoryImg.src = "image/${category.img}";
+      calculateTotal();
     });
     div.innerHTML = `
                         <div class="left"> 
