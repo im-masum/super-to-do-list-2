@@ -160,7 +160,10 @@ const calculateTotal = () => {
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
   categoryTasks.innerHTML = "${categoryTasks.length} tasks";
+  totalTasks.innerHTML = tasks.length;
 };
+ calculateTotal();
+ 
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
@@ -201,4 +204,8 @@ const renderCategories = () => {
   });
 };
 
+
+
+
+calculateTotal();
 renderCategories();
