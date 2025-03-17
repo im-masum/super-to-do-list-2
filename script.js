@@ -154,12 +154,14 @@ const categoriesContainer = document.querySelector(".categories");
 const categoryTitle = document.querySelector(".category-title");
 const categoryTasks = document.querySelector(".category-tasks");
 const categoryImg = document.querySelector("#category-img");
+const totalTasks = document.querySelector(".totalTask");
+
 
 const calculateTotal = () => {
   const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
-  categoryTasks.innerHTML = "${categoryTasks.length} tasks";
+  categoryTasks.innerHTML = '${categoryTasks.length} tasks';
   totalTasks.innerHTML = tasks.length;
 };
  calculateTotal();
