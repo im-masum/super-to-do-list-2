@@ -156,23 +156,22 @@ const categoryTasks = document.querySelector(".category-tasks");
 const categoryImg = document.querySelector("#category-img");
 const totalTasks = document.querySelector(".totalTask");
 
-
 const calculateTotal = () => {
   const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
-  categoryTasks.innerHTML = '${categoryTasks.length} tasks';
+  categoryTasks.innerHTML = "${categoryTasks.length} tasks";
   totalTasks.innerHTML = tasks.length;
 };
- calculateTotal();  
- 
+calculateTotal();
 
-function renderCategories() {
+const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
     // get all the tasks of current category
     const categoryTasks = tasks.filter(
-      (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
+      (task) =>
+        task.category.toLowerCase() === selectCategory.title.toLowerCase()
     );
 
     // create a div to render category
@@ -203,10 +202,13 @@ function renderCategories() {
 
     categoriesContainer.appendChild(div);
   });
+};
+
+const tasksContainer = document.querySelector(".task")
+
+const renderTasks = () => {
+     tasksContainer.innerHTML= '';
 }
-
-
-
 
 calculateTotal();
 renderCategories();
