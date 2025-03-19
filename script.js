@@ -164,16 +164,15 @@ const calculateTotal = () => {
   categoryTasks.innerHTML = '${categoryTasks.length} tasks';
   totalTasks.innerHTML = tasks.length;
 };
- calculateTotal();
+ calculateTotal();  
  
 
-const renderCategories = () => {
+function renderCategories() {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
     // get all the tasks of current category
     const categoryTasks = tasks.filter(
-      (task) =>
-        task.category.toLowerCase() === selectCategory.title.toLowerCase()
+      (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
     );
 
     // create a div to render category
@@ -204,10 +203,11 @@ const renderCategories = () => {
 
     categoriesContainer.appendChild(div);
   });
-};
+}
 
 
 
 
 calculateTotal();
 renderCategories();
+renderTasks();
