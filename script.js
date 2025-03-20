@@ -208,6 +208,14 @@ const tasksContainer = document.querySelector(".task")
 
 const renderTasks = () => {
      tasksContainer.innerHTML= '';
+       const categoryTasks = tasks.filter(
+         (task) =>
+           task.category.toLowerCase() === selectCategory.title.toLowerCase()
+       );
+      //  if no task for selected category
+      if (categoryTasks.length === 0) {
+        tasksContainer.innerHTML = ''
+      }
 }
 
 calculateTotal();
