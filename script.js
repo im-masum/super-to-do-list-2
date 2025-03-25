@@ -55,8 +55,8 @@ let categories = [
   },
 ];
 
-let tasks = [
-  {
+let tasks =[
+{
     id: 1,
     task: "Go to market",
     category: "Shopping",
@@ -157,21 +157,20 @@ const categoryImg = document.querySelector("#category-img");
 const totalTasks = document.querySelector(".totalTask");
 
 const calculateTotal = () => {
-  const categoryTasks = tasks.filter(
+const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
-  categoryTasks.innerHTML = "${categoryTasks.length} tasks";
+  categoryTasks.innerHTML = `${categoryTasks.length} tasks`;
   totalTasks.innerHTML = tasks.length;
-};
+}
 calculateTotal();
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
     // get all the tasks of current category
-    const categoryTasks = tasks.filter(
-      (task) =>
-        task.category.toLowerCase() === selectCategory.title.toLowerCase()
+    const categoryTasks =  tasks.filter(
+      (task) = task.category.toLowerCase() === category.title.toLowerCase()
     );
 
     // create a div to render category
@@ -210,11 +209,13 @@ const renderTasks = () => {
      tasksContainer.innerHTML= '';
        const categoryTasks = tasks.filter(
          (task) =>
-           task.category.toLowerCase() === selectCategory.title.toLowerCase()
+           task.category.toLowerCase() === selectedCategory.title.toLowerCase()
        );
+
       //  if no task for selected category
       if (categoryTasks.length === 0) {
-        tasksContainer.innerHTML = '<p class="no-task">No tasks</p>';
+        tasksContainer.innerHTML = `
+        <p class="no-task">No tasks</p>`;
       }
 }
 
