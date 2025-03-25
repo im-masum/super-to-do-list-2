@@ -214,7 +214,7 @@ const renderTasks = () => {
        );
       //  if no task for selected category
       if (categoryTasks.length === 0) {
-        tasksContainer.innerHTML = ''
+        tasksContainer.innerHTML = '<p class="no-task">No tasks</p>';
       }
 }
 
