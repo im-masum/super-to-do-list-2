@@ -160,7 +160,7 @@ const calculateTotal = () => {
 const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
-  categoryTasks.innerHTML = `${categoryTasks.length} tasks`;
+  categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
   totalTasks.innerHTML = tasks.length;
 }
 calculateTotal();
@@ -170,7 +170,7 @@ const renderCategories = () => {
   categories.forEach((category) => {
     // get all the tasks of current category
     const categoryTasks =  tasks.filter(
-      (task) = task.category.toLowerCase() === category.title.toLowerCase()
+      (tasks) = tasks.category.toLowerCase() === category.title.toLowerCase()
     );
 
     // create a div to render category
