@@ -216,9 +216,25 @@ const renderTasks = () => {
       if (categoryTasks.length === 0) {
         tasksContainer.innerHTML = `
         <p class="no-task">No tasks</p>`;
+      } else {
+        // if there are tasks for selected category render then
+        categoryTasks.forEach((task) =>{
+          const div = document.createElement ("div");
+          div.classList.add("task-wrapper");
+          const label = document.createElement("label");
+          label.classList.add("task");
+          label.setAttribute("for", task.id);
+          const checkbox = document.createElement("input");
+          checkbox.type = "checkbox";
+          checkbox.id = task.id;
+          checkbox.checked = task.completed;
+          div.innerHTML = `
+          
+          `
+        });
       }
 }
-
+ 
 calculateTotal();
 renderCategories();
 renderTasks();
