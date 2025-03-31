@@ -55,8 +55,8 @@ let categories = [
   },
 ];
 
-let tasks =[
-{
+let tasks = [
+  {
     id: 1,
     task: "Go to market",
     category: "Shopping",
@@ -157,20 +157,20 @@ const categoryImg = document.querySelector("#category-img");
 const totalTasks = document.querySelector(".totalTask");
 
 const calculateTotal = () => {
-const categoryTasks = tasks.filter(
+  const categoryTasks = tasks.filter(
     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
   );
   categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
   totalTasks.innerHTML = tasks.length;
-}
+};
 calculateTotal();
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
     // get all the tasks of current category
-    const categoryTasks =  tasks.filter(
-      (tasks) = tasks.category.toLowerCase() === category.title.toLowerCase()
+    const categoryTasks = tasks.filter(
+      (tasks = tasks.category.toLowerCase() === category.title.toLowerCase())
     );
 
     // create a div to render category
@@ -203,38 +203,40 @@ const renderCategories = () => {
   });
 };
 
-const tasksContainer = document.querySelector(".task")
+const tasksContainer = document.querySelector(".task");
 
 const renderTasks = () => {
-     tasksContainer.innerHTML= '';
-       const categoryTasks = tasks.filter(
-         (task) =>
-           task.category.toLowerCase() === selectedCategory.title.toLowerCase()
-       );
+  tasksContainer.innerHTML = "";
+  const categoryTasks = tasks.filter(
+    (task) =>
+      task.category.toLowerCase() === selectedCategory.title.toLowerCase()
+  );
 
-      //  if no task for selected category
-      if (categoryTasks.length === 0) {
-        tasksContainer.innerHTML = `
+  //  if no task for selected category
+  if (categoryTasks.length === 0) {
+    tasksContainer.innerHTML = `
         <p class="no-task">No tasks</p>`;
-      } else {
-        // if there are tasks for selected category render then
-        categoryTasks.forEach((task) =>{
-          const div = document.createElement ("div");
-          div.classList.add("task-wrapper");
-          const label = document.createElement("label");
-          label.classList.add("task");
-          label.setAttribute("for", task.id);
-          const checkbox = document.createElement("input");
-          checkbox.type = "checkbox";
-          checkbox.id = task.id;
-          checkbox.checked = task.completed;
-          div.innerHTML = `
-          
-          `
-        });
-      }
-}
- 
+  } else {
+    // if there are tasks for selected category render then
+    categoryTasks.forEach((task) => {
+      const div = document.createElement("div");
+      div.classList.add("task-wrapper");
+      const label = document.createElement("label");
+      label.classList.add("task");
+      label.setAttribute("for", task.id);
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = task.id;
+      checkbox.checked = task.completed;
+      div.innerHTML = `
+                <div class="delete">
+                  <i class='bx bx-trash'></i>
+                </div>
+          `;
+    });
+  }
+};
+
 calculateTotal();
 renderCategories();
 renderTasks();
