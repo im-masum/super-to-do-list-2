@@ -229,7 +229,9 @@ const renderTasks = () => {
       checkbox.id = task.id;
       checkbox.checked = task.completed;
       div.innerHTML = `
-                
+                <div class="delete">
+                        <i class='bx bx-trash'></i>
+                    </div>
           `;
     });
   }
