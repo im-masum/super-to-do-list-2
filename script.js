@@ -1,242 +1,86 @@
-const wrapper = document.querySelector(".wrapper");
-const backBtn = document.querySelector(".back-btn");
-const menuBtn = document.querySelector(".menu-btn");
+// script.js
 
-const toggleScreen = () => {
-  wrapper.classList.toggle("show-category");
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".wrapper");
+  const categoryScreen = document.querySelector(".category-screen");
+  const backBtn = document.querySelector(".back-btn");
+  const addTaskBtn = document.querySelector(".add-task-btn");
+  const addTaskForm = document.querySelector(".add-task");
+  const cancelBtn = document.querySelector(".cancel-btn");
+  const blackBackdrop = document.querySelector(".black-backdrop");
+  const addBtn = document.querySelector(".add-btn");
+  const taskInput = document.getElementById("task-input");
+  const categorySelect = document.getElementById("category-select");
+  const tasksWrapper = document.querySelector(".tasks");
+  const totalTaskDisplay = document.querySelector(".totalTask");
+  const categoryTasks = document.querySelector(".category-tasks");
 
-menuBtn.addEventListener("click", toggleScreen);
-backBtn.addEventListener("click", toggleScreen);
+  let taskCount = 1;
 
-const addTaskBnt = document.querySelector(".add-task-btn");
-const addTaskForm = document.querySelector(".add-task");
-const blackBackdrop = document.querySelector(".black-backdrop");
-
-const toggleAddTaskForm = () => {
-  addTaskForm.classList.toggle("active");
-  blackBackdrop.classList.toggle("active");
-  addTaskBnt.classList.toggle("active");
-};
-
-addTaskBnt.addEventListener("click", toggleAddTaskForm);
-blackBackdrop.addEventListener("click", toggleAddTaskForm);
-
-// lets add categories and tasks with js
-
-let categories = [
-  {
-    title: "Personal",
-    img: "user-1.jpg",
-  },
-  {
-    title: "Work",
-    img: "briefcase.jpg",
-  },
-  {
-    title: "Shopping",
-    img: "shopping-bag.jpg",
-  },
-  {
-    title: "Health",
-    img: "health.jpg",
-  },
-  {
-    title: "Fitness",
-    img: "fitness.jpg",
-  },
-  {
-    title: "Education",
-    img: "education.jpg",
-  },
-  {
-    title: "Finance",
-    img: "finance.jpg",
-  },
-];
-
-let tasks = [
-  {
-    id: 1,
-    task: "Go to market",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 2,
-    task: "Read chapter of a book",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 3,
-    task: "Prepare presentation for meeting",
-    category: "Work",
-    completed: false,
-  },
-  {
-    id: 4,
-    task: "Complete coding challenge",
-    category: "Coding",
-    completed: false,
-  },
-  {
-    id: 5,
-    task: "Do a 20-minute workout",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 6,
-    task: " Take a 30-minute walk",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 7,
-    task: "Watch an educational video online",
-    category: "Educational",
-    completed: false,
-  },
-  {
-    id: 8,
-    task: "Review monthly budget",
-    category: "Finance",
-    completed: false,
-  },
-  {
-    id: 9,
-    task: "Buy groceries for the week",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 10,
-    task: "Write in a journal",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 11,
-    task: "Try a new healthy recipe",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 12,
-    task: "Attend a yoga class",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 13,
-    task: "Buy new clothes ",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 14,
-    task: "Set up automatic bill payments",
-    category: "Finance",
-    completed: false,
-  },
-  {
-    id: 15,
-    task: "Read an article about a new topic",
-    category: "Personal",
-    completed: false,
-  },
-];
-
-let selectCategory = categories[0];
-
-const categoriesContainer = document.querySelector(".categories");
-const categoryTitle = document.querySelector(".category-title");
-const categoryTasks = document.querySelector(".category-tasks");
-const categoryImg = document.querySelector("#category-img");
-const totalTasks = document.querySelector(".totalTask");
-
-const calculateTotal = () => {
-  const categoryTasks = tasks.filter(
-    (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
-  );
-  categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
-  totalTasks.innerHTML = tasks.length;
-};
-calculateTotal();
-
-const renderCategories = () => {
-  categoriesContainer.innerHtml = "";
-  categories.forEach((category) => {
-    // get all the tasks of current category
-    const categoryTasks = tasks.filter(
-      (tasks = tasks.category.toLowerCase() === category.title.toLowerCase())
-    );
-
-    // create a div to render category
-    const div = document.createElement("div");
-    div.classList.add("category");
-    div.addEventListener("click", () => {
-      wrapper.classList.add("show-category");
-      selectCategory = category;
-      categoryTitle.innerHTML = categoryTitle;
-      categoryImg.src = "image/${category.img}";
-      calculateTotal();
-    });
-    div.innerHTML = `
-                        <div class="left"> 
-                        <img src="images/${category.img}"
-                          alt="${category.title}" />
-                          <div class="content">
-                            <h2>"${category.title}"</h2>
-                            <p>"${categoryTasks.length}" Tasks</p>
-                          </div>
-                          </div>
-                                <div class="options">
-                                  <div class="toggle-btn">
-                                    <i class='bx bx-dots-vertical-rounded'></i>
-                                  </div>
-                                </div>
-                                `;
-
-    categoriesContainer.appendChild(div);
+  // Toggle task form
+  addTaskBtn.addEventListener("click", () => {
+    addTaskBtn.classList.toggle("active");
+    addTaskForm.classList.toggle("active");
+    blackBackdrop.classList.toggle("active");
   });
-};
 
-const tasksContainer = document.querySelector(".task");
+  // Cancel task form
+  cancelBtn.addEventListener("click", () => {
+    addTaskBtn.classList.remove("active");
+    addTaskForm.classList.remove("active");
+    blackBackdrop.classList.remove("active");
+    taskInput.value = "";
+  });
 
-const renderTasks = () => {
-  tasksContainer.innerHTML = "";
-  const categoryTasks = tasks.filter(
-    (task) =>
-      task.category.toLowerCase() === selectedCategory.title.toLowerCase()
-  );
+  // Add new task
+  addBtn.addEventListener("click", () => {
+    const taskText = taskInput.value.trim();
+    if (taskText === "") return;
 
-  //  if no task for selected category
-  if (categoryTasks.length === 0) {
-    tasksContainer.innerHTML = `
-        <p class="no-task">No tasks</p>`;
-  } else {
-    // if there are tasks for selected category render then
-    categoryTasks.forEach((task) => {
-      const div = document.createElement("div");
-      div.classList.add("task-wrapper");
-      const label = document.createElement("label");
-      label.classList.add("task");
-      label.setAttribute("for", task.id);
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.id = task.id;
-      checkbox.checked = task.completed;
-      div.innerHTML = `
-                <div class="delete">
-                        <i class='bx bx-trash'></i>
-                    </div>
-          `;
-    });
+    const newTask = document.createElement("div");
+    newTask.classList.add("task-wrapper");
+    newTask.innerHTML = `
+          <label class="task">
+              <input type="checkbox">
+              <span class="checkmark"><i class='bx bx-check'></i></span>
+              <p>${taskText}</p>
+          </label>
+          <div class="delete"><i class='bx bx-trash'></i></div>
+      `;
+    tasksWrapper.appendChild(newTask);
+
+    taskCount++;
+    updateTaskCounts();
+
+    // Clear form
+    taskInput.value = "";
+    addTaskBtn.classList.remove("active");
+    addTaskForm.classList.remove("active");
+    blackBackdrop.classList.remove("active");
+  });
+
+  // Delete a task
+  tasksWrapper.addEventListener("click", (e) => {
+    if (e.target.closest(".delete")) {
+      e.target.closest(".task-wrapper").remove();
+      taskCount = Math.max(0, taskCount - 1);
+      updateTaskCounts();
+    }
+  });
+
+  // Back button to show category screen
+  backBtn.addEventListener("click", () => {
+    wrapper.classList.remove("show-category");
+  });
+
+  // Update task count display
+  function updateTaskCounts() {
+    totalTaskDisplay.textContent = taskCount;
+    categoryTasks.textContent = `${taskCount} Tasks`;
   }
-};
 
-calculateTotal();
-renderCategories();
-renderTasks();
+  // Demo: Show task screen on page load
+  setTimeout(() => {
+    wrapper.classList.add("show-category");
+  }, 500);
+});

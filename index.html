@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Super to-do list</title>
 </head>
 
 <body>
+
     <section class="wrapper show-category">
         <div class="screen-backdrop"></div>
         <div class="screen home-screen">
@@ -24,75 +25,75 @@
                         <p>Today you have <span class="totalTask">5</span></p>
                     </div>
                     <div class="img">
+                        <div class="backdrop"></div>
                         <img src="images/admin.jpg" alt="">
                     </div>
                 </div>
             </div>
-    
-        <!-- ====CATEGORIES==== -->
-        <section class="categories-wrapper">
-            <div class="categories">
-                <!-- <div class="category"> -->
-                <!-- <div class="left">
-                                <img src="images/user-1.jpg" alt="">
-                                <div class="content">
-                                    <h2>Personal</h2>
-                                    <p>5 Tasks</p>
-                                </div>
-                            </div> -->
-                <!-- <div class="options">
-                                <div class="toggle-btn">
-                                    <i class='bx bx-dots-vertical-rounded'></i>
-                                </div>
-                            </div> -->
-                <!-- </div> -->
-            </div>
-        </section>
 
-
-
-        <!-- ====TASKS SCREEN==== -->
-        <section class="screen category-screen">
-            <div class="head-wrapper">
-                <div class="back-btn">
-                    <i class='bx bx-arrow-back'></i>
+            <!-- ====CATEGORIES==== -->
+            <section class="categories-wrapper">
+                <div class="categories">
+                    <div class="category">
+                        <div class="left">
+                            <img src="images/user-1.jpg" alt="">
+                            <div class="content">
+                                <h2>Personal</h2>
+                                <p>5 Tasks</p>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <div class="toggle-btn">
+                                <i class='bx bx-dots-vertical-rounded'></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="options">
-                    <i class='bx bx-dots-vertical-rounded'></i>
+            </section>
+            
+            <!-- ====TASKS SCREEN==== -->
+            <!-- <section c lass="screen category-screen">
+                <div class="head-wrapper">
+                    <div class="back-btn">
+                        <i class='bx bx-arrow-back'></i>
+                    </div>
+                    <div class="options">
+                        <i class='bx bx-dots-vertical-rounded'></i>
+                    </div>
+                </div>
+            </section> -->
+
+            <div class="category-details">
+                <img src="images/user-1.jpg" alt="category-img">
+                <div class="details">
+                    <p class="category-tasks">5 Tasks</p>
+                    <h2 class="category-title">Personal</h2>
                 </div>
             </div>
-        </section>
 
-        <div class="category-details">
-            <img src="images/user-1.jpg" alt="category-img">
-            <div class="details">
-                <p class="category-tasks">5 Tasks</p>
-                <h2 class="category-title">Personal</h2>
-            </div>
-        </div>
-
-        <div class="tasks-wrapper">
-            <div class="tasks">
-                <div class="task-wrapper">
-                    <label for="task" class="task">
-                        <input type="checkbox" name="" id="task">
-                        <span class="checkmark">
-                            <i class='bx bx-check'></i>
-                        </span>
-                        <p>Hello there</p>
-                    </label>
-                    <div class="delete">
-                        <i class='bx bx-trash'></i>
+            <div class="tasks-wrapper">
+                <div class="tasks">
+                    <div class="task-wrapper">
+                        <label for="task" class="task">
+                            <input type="checkbox" name="" id="task">
+                            <span class="checkmark">
+                                <i class='bx bx-check'></i>
+                            </span>
+                            <p>Hello there</p>
+                        </label>
+                        <div class="delete">
+                            <i class='bx bx-trash'></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!--==== ADD TASK BTN ==== -->
         <div class="add-task-btn">
             <i class='bx bx-plus'></i>
         </div>
+
         <!-- Backdrop -->
         <div class="black-backdrop"></div>
         <!-- TASK FORM -->
