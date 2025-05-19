@@ -155,16 +155,16 @@ const categoriesContainer = document.querySelector(".categories");
 const categoryTitle = document.querySelector(".category-title");
 const categoryTasks = document.querySelector(".category-task");
 const categoryImg = document.querySelector("#category-img");
-const totalTask = document.querySelector(".totalTask");
+// const totalTask = document.querySelector(".totalTask");  
 
-const calculateTotal = () => {
-  const categoryTasks = tasks.filter(
-    (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
-  );
-  categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
-  totalTasks.innerHTML = tasks.length;
-};
-calculateTotal();
+// const calculateTotal = () => {
+//   const categoryTasks = tasks.filter(
+//     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
+//   );
+//   categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
+//   totalTasks.innerHTML = tasks.length;
+// };
+// calculateTotal();
 
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
@@ -179,7 +179,7 @@ const renderCategories = () => {
     div.classList.add("category");
     div.addEventListener("click", () => {
       wrapper.classList.add("show-category");
-      selectCategory = category;
+      selectCategory = category; 
       categoryTitle.innerHTML = category.title;
       categoryImg.src = `images/${category.img}`;
       calculateTotal();
