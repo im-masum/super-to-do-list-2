@@ -179,10 +179,10 @@ const renderCategories = () => {
     div.classList.add("category");
     div.addEventListener("click", () => {
       wrapper.classList.add("show-category");
-      selectCategory = category; 
+      selectedCategory = category; 
       categoryTitle.innerHTML = category.title;
       categoryImg.src = `images/${category.img}`;
-      calculateTotal();
+      // calculateTotal();
     });
     div.innerHTML = `
                      <div class="left"> 
