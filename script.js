@@ -149,23 +149,23 @@ let tasks = [
   },
 ];
 
-let selectCategories = categories[0];
+let selectedCategories = categories[0];
 
 const categoriesContainer = document.querySelector(".categories");
 const categoryTitle = document.querySelector(".category-title");
-const categoryTasks = document.querySelector(".category-task");
+const totalCategoryTasks = document.querySelector(".category-tasks");
 const categoryImg = document.querySelector("#category-img");
-// const totalTask = document.querySelector(".totalTask");  
+const totalTasks = document.querySelector(".totalTasks");
 
-// const calculateTotal = () => {
-//   const categoryTasks = tasks.filter(
-//     (task) => task.category.toLowerCase() === selectCategory.title.toLowerCase()
-//   );
-//   categoryTasks.innerHTML = `${categoryTasks.length} Tasks`;
-//   totalTasks.innerHTML = tasks.length;
-// };
-// calculateTotal();
-
+const calculateTotal = () => {
+  const categoryTasks = tasks.filter(
+    (task) => task.category.toLowerCase() === 
+    selectCategory.title.total.toLowerCase()
+  )
+  categoryTasks.innerHTML = `S{category.length} Tasks`;
+  totalTasks.innerHTML = tasks.length;
+};
+  
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
@@ -179,10 +179,10 @@ const renderCategories = () => {
     div.classList.add("category");
     div.addEventListener("click", () => {
       wrapper.classList.add("show-category");
-      selectedCategory = category; 
+      selectedCategories  = category;
       categoryTitle.innerHTML = category.title;
       categoryImg.src = `images/${category.img}`;
-      // calculateTotal();
+      calculateTotal();
     });
     div.innerHTML = `
                      <div class="left"> 
@@ -204,3 +204,8 @@ const renderCategories = () => {
 };
 
 renderCategories();
+
+
+
+
+
