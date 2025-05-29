@@ -161,8 +161,23 @@ body {
     gap: 2rem;
     margin-top: 100px;
     border-radius: 10px;
+    background-color: #fff;
+    font-size: clamp(1rem, calc(7vw + 1rem), 1rem);
+    color: rgb(36, 34, 34);
+    box-shadow: 0 10px 20px 5px #00000023;
+    transition: all .3s;
 
 }
+.category-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px 5px #00000040;
+}
+.category-details h2 {
+    font-weight: 500;
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
+    color: rgb(36, 34, 34);
+}
+
 
 .category-details img {
     width: 4rem;
@@ -187,6 +202,7 @@ body {
     color: rgb(72, 66, 66);
     margin-top: 20px;
     font-weight: 500;
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.2rem);
 }
 
 .welcome .img {
@@ -307,7 +323,7 @@ body {
 .no-task {
     margin-top: 5rem;
     text-align: center;
-    font-size: clamp(1.2rem, calc(7vw + 1rem), 1.5rem);
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
     font-weight: 500;
     opacity: .6;
 }
@@ -340,7 +356,9 @@ body {
 .task {
     display: flex;
     align-items: center;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.2rem);
+    color: rgb(36, 34, 34);
+    padding: 10px 20px;
     font-weight: 500;
     gap: .5rem;
     width: max-content;
@@ -425,7 +443,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: aquamarine;
-    font-size: clamp(1.5rem, calc(7vw +1rem), 2rem);
+    font-size: clamp(1.5rem, calc(7vw +1rem), 1.5rem);
     border-radius: 50%;
     transition: all 0.3s;
     display: flex;
@@ -458,7 +476,7 @@ body {
 }
 
 .add-task .heading {
-    font-size: clamp(1.5rem, calc(7vw + 1rem), 2rem);
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
     font-weight: 600;
     margin-bottom: 1rem;
 }
