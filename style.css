@@ -81,8 +81,7 @@ body {
 }
 
 .head-wrapper {
-    padding: 0 1rem;
-
+    padding: min(10px, 8%) 20px;
 }
 
 .menu-btn {
@@ -93,7 +92,7 @@ body {
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
     color: rgb(36, 34, 34);
     transition: all 0.3s;
 
@@ -180,14 +179,17 @@ body {
 
 .category-details img {
     width: 4rem;
+    height: auto;
     border-radius: 50px;
 }
 
 .welcome {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin-top: 2rem;
-    padding: 20px;
+    align-items: center;
+    gap: 1rem;;
 }
 
 .welcome h1 {
@@ -263,6 +265,7 @@ body {
 
 .category .left img {
     width: 50px;
+    height: auto;
     border-radius: 20px;
 }
 
