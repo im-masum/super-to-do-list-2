@@ -62,7 +62,7 @@ body {
     transform: translate(-50%, -60%);
     border: 10px solid rgb(176, 255, 5);
     background-color: #2df9dd;
-
+    margin-top: 20px;
 }
 
 .screen-backdrop {
@@ -77,8 +77,6 @@ body {
     background-color: aquamarine;
     border: 15px solid rgb(224, 235, 23);
     transition: all .3s;
-
-
 
 }
 
