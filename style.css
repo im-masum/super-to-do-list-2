@@ -284,7 +284,8 @@ body {
 .category .toggle-btn {
     cursor: pointer;
     padding: 0rem .4rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.2rem);
+    color: rgb(36, 34, 34);
     opacity: .8;
     transform: all .3s;
 }
@@ -306,7 +307,8 @@ body {
 .no-task {
     margin-top: 5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, calc(7vw + 1rem), 1.5rem);
+    font-weight: 500;
     opacity: .6;
 }
 
@@ -456,7 +458,8 @@ body {
 }
 
 .add-task .heading {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, calc(7vw + 1rem), 2rem);
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -554,5 +557,11 @@ body {
 
     .add-task-btn {
         font-size: 24px;
+    }
+    .add-task-btn.active {
+        bottom: 15rem;
+    }
+    .add-task {
+        bottom: -100%;
     }
 }
