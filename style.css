@@ -56,13 +56,13 @@ body {
 
 .wrapper.show-category .category-screen {
     transform: translateX(-100%);
-
 }
 
 .wrapper.show-category .screen-backdrop {
     transform: translate(-50%, -60%);
-    border: 10px solid rgb(92, 252, 204);
+    border: 10px solid rgb(201, 252, 92);
     background-color: #2df9dd;
+
 
 }
 
