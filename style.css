@@ -253,7 +253,7 @@ body {
 
 .category .content h2 {
     font-weight: 500;
-    font-size: clamp(1.2rem, calc(7vw + 1rem), 1.5rem);
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.2rem);
     color: rgb(36, 34, 34);
     
 }
@@ -425,7 +425,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: aquamarine;
-    font-size: clamp(1.5rem, calc(7vw +1rem), 3rem);
+    font-size: clamp(1.5rem, calc(7vw +1rem), 2rem);
     border-radius: 50%;
     transition: all 0.3s;
     display: flex;
@@ -564,4 +564,9 @@ body {
     .add-task {
         bottom: -100%;
     }
+    .add-task.active {
+        bottom: 0;
+    }
+
+
 }
