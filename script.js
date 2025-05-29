@@ -166,6 +166,8 @@ const calculateTotal = () => {
   totalTasks.innerHTML = tasks.length;
 };
   
+
+
 const renderCategories = () => {
   categoriesContainer.innerHtml = "";
   categories.forEach((category) => {
@@ -202,6 +204,11 @@ const renderCategories = () => {
     categoriesContainer.appendChild(div);
   });
 };
+
+// Initial render of categories
+
+
+
 
 renderCategories();
 
